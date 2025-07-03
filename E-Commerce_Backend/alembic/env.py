@@ -5,13 +5,14 @@ from alembic import context
 
 # Import your settings and base
 from app.core.config import settings
-from app.auth.models import Base
+from app.core.database import Base
 
 # CRITICAL: Import ALL your model classes here
 from app.auth.models import User
 from app.products.models import Product  # Make sure this is imported!
 from app.cart.models import Cart
 from app.orders.models import Order, OrderItem
+from app.reviews.models import Review
 # Add other models as you create them:
 # from app.orders.models import Order
 # from app.cart.models import Cart, CartItem

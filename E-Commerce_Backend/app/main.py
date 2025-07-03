@@ -6,6 +6,7 @@ from app.cart.routes import router as cart_router
 from app.orders.routes import router as order_router
 from app.checkout.routes import router as checkout_router
 from app.payments.routes import router as payments_router
+from app.reviews.routes import router as review_router
 from app.middlewares.logging_middleware import LoggingMiddleware
 
 app = FastAPI(
@@ -21,7 +22,7 @@ app.include_router(cart_router)
 app.include_router(order_router)
 app.include_router(checkout_router)
 app.include_router(payments_router)
-
+app.include_router(review_router)
 @app.get("/") # decorator 
 def read_root():
     return {"status": "OK", "message": "E-commerce Backend running"}

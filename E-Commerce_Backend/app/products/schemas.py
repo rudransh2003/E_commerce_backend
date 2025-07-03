@@ -10,7 +10,6 @@ class ProductCreate(BaseModel):
 
 class ProductRead(ProductCreate):
     id: int
-
     model_config = ConfigDict(from_attributes=True) 
 
 class ProductUpdate(BaseModel):
